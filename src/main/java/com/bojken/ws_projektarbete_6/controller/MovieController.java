@@ -1,5 +1,9 @@
 package com.bojken.ws_projektarbete_6.controller;
 
+import com.bojken.ws_projektarbete_6.model.Movie;
+import com.bojken.ws_projektarbete_6.repository.MovieRepository;
+import com.bojken.ws_projektarbete_6.response.WsResponse;
+import com.bojken.ws_projektarbete_6.service.ApiService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

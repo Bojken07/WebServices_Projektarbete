@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Sensitive Information ###
+src/main/resources/application.properties
+src/main/resources/mykeystore.p12
+Docker-Compose.yml

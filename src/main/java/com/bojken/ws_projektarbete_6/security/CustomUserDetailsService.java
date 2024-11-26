@@ -1,7 +1,6 @@
-package com.bojken.ws_projektarbete_6.Security;
+package com.bojken.ws_projektarbete_6.security;
 
-import com.bojken.ws_projektarbete_6.Security.CustomUserDetailsService;
-import com.bojken.ws_projektarbete_6.UserRepository;
+import com.bojken.ws_projektarbete_6.repository.UserRepository;
 import com.bojken.ws_projektarbete_6.repository.CustomUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

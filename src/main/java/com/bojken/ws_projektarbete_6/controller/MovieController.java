@@ -74,5 +74,4 @@ public class MovieController {
 
         return apiService.deleteMovieById(id);
     }
-
 }

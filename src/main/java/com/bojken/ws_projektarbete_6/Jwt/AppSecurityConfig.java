@@ -1,6 +1,6 @@
 package com.bojken.ws_projektarbete_6.Jwt;
 
-import com.bojken.ws_projektarbete_6.Security.CustomUserDetailsService;
+import com.bojken.ws_projektarbete_6.security.CustomUserDetailsService;
 import com.bojken.ws_projektarbete_6.authorities.UserPermission;
 import com.bojken.ws_projektarbete_6.authorities.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +11,9 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter;
 
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-
-import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 @EnableWebSecurity

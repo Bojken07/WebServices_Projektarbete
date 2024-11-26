@@ -1,4 +1,4 @@
-package com.bojken.ws_projektarbete_6.Security;
+package com.bojken.ws_projektarbete_6.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

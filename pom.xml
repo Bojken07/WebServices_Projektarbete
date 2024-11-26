@@ -59,19 +59,19 @@
 		</dependency>
 
 
-			<!-- Spring Boot Starter Security for password encoding and authentication -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-security</artifactId>
-			</dependency>
+		<!-- Spring Boot Starter Security for password encoding and authentication -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 
-			<!-- Optional: If you're using Spring Web, include this as well -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-			</dependency>
+		<!-- Optional: If you're using Spring Web, include this as well -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
-			<!-- Other dependencies... -->
+		<!-- Other dependencies... -->
 
 
 

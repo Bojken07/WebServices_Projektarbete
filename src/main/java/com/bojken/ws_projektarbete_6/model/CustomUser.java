@@ -4,7 +4,7 @@ import com.bojken.ws_projektarbete_6.authorities.UserRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.List;

@@ -1,6 +1,8 @@
 package com.bojken.ws_projektarbete_6.controller;
 
-import ch.qos.logback.core.model.Model;
+
+import org.springframework.ui.Model;
+
 import com.bojken.ws_projektarbete_6.authorities.UserRole;
 import com.bojken.ws_projektarbete_6.model.CustomUser;
 import com.bojken.ws_projektarbete_6.model.Movie;

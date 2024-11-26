@@ -6,10 +6,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
-public class AppPasswordConfig {
+public class PasswordConfig {
 
     @Bean
-    public PasswordEncoder bcryptPasswordEncoder() {
+    public PasswordEncoder BcryptPasswordEncoder() {
 
         // Default value = 10
         return new BCryptPasswordEncoder(15);   // Time based = Higher number, Slower the process

@@ -5,8 +5,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
-// TODO - Change to RECORD class (manually) - NOT GOING TO WORK
 public class CustomUserDetails implements UserDetails {
 
     private final String username;
@@ -37,38 +37,39 @@ public class CustomUserDetails implements UserDetails {
         this.isEnabled = customUser.isEnabled();
     }
 
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return authorities;
+        return List.of();
     }
 
     @Override
     public String getPassword() {
-        return password;
+        return "";
     }
 
     @Override
     public String getUsername() {
-        return username;
+        return "";
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return isAccountNonExpired;
+        return UserDetails.super.isAccountNonExpired();
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return isAccountNonLocked;
+        return UserDetails.super.isAccountNonLocked();
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return isCredentialsNonExpired;
+        return UserDetails.super.isCredentialsNonExpired();
     }
 
     @Override
     public boolean isEnabled() {
-        return isEnabled;
+        return UserDetails.super.isEnabled();
     }
 }

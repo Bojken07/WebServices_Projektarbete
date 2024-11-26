@@ -21,11 +21,13 @@ public class Movie {
     @JsonProperty("vote_average")
     private double voteAverage;
     private int budget;
+    @Column(name = "poster_path")
+    @JsonProperty("poster_path")
     private String posterPath;
 
     public Movie() {}
 
-    public Movie(Long id, String title, String overview, String movieReview, String release_date, List<String> origin_country, double vote_average, int budget) {
+    public Movie(Long id, String title, String overview, String movieReview, String release_date, List<String> origin_country, double vote_average, int budget, String posterPath) {
         this.id = id;
         this.title = title;
         this.overview = overview;
@@ -34,6 +36,7 @@ public class Movie {
         this.originCountry = origin_country;
         this.voteAverage = vote_average;
         this.budget = budget;
+        this.posterPath = posterPath;
     }
 
     public Long getId() {

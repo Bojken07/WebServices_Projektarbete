@@ -1,8 +1,8 @@
 package com.bojken.ws_projektarbete_6.Jwt;
 
-import com.bojken.ws_projektarbete_6.security.CustomUserDetailsService;
 import com.bojken.ws_projektarbete_6.authorities.UserPermission;
 import com.bojken.ws_projektarbete_6.authorities.UserRole;
+import com.bojken.ws_projektarbete_6.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,10 +29,10 @@ public class AppSecurityConfig {
     // TODO - Question #8 - Bean alternative to Autowired
     // TODO - Question #11 - Will static be found? It's inside the Java folder!
 
-    private final CustomUserDetailsService customUserDetailsService;
+    private final UserService.CustomUserDetailsService customUserDetailsService;
 
     @Autowired
-    public AppSecurityConfig(CustomUserDetailsService customUserDetailsService) {
+    public AppSecurityConfig(UserService.CustomUserDetailsService customUserDetailsService) {
         this.customUserDetailsService = customUserDetailsService;
     }
 

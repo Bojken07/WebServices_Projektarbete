@@ -21,6 +21,7 @@ public class Movie {
     @JsonProperty("vote_average")
     private double voteAverage;
     private int budget;
+    private String posterPath;
 
     public Movie() {}
 
@@ -90,4 +91,12 @@ public class Movie {
     public void setBudget(int budget) {
         this.budget = budget;
     }
+
+    public String getPosterPath() {
+        return posterPath;
+    }
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
+    }
+}
 }

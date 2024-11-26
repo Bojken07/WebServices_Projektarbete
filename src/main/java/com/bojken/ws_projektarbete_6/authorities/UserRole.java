@@ -3,39 +3,35 @@ package com.bojken.ws_projektarbete_6.authorities;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import static com.bojken.ws_projektarbete_6.authorities.UserPermission.*;
+import static com.bojken.ws_projektarbete_6.authorities.UserPermissions.*;
 
 public enum UserRole {
-    GUEST(List.of(GET.getPermission())),
-    USER(List.of(GET.getPermission(), POST.getPermission())),
-    ADMIN(List.of(GET.getPermission(), POST.getPermission(), DELETE.getPermission()));
 
-    private final List<String> permission;
+    USER(GET),
+    ADMIN(GET, POST, PUT, DELETE);
 
-    UserRole(List<String> permission) {
-        this.permission = permission;
+    private final List<String> permissions;
+
+    UserRole(UserPermissions... permissionsList) {
+        this.permissions = Arrays.stream(permissionsList)
+                .map(UserPermissions::getPermission)
+                .toList();
     }
 
-    public List<String> getPermission () {
-        return permission;
+    public List<String> getPermissions() {
+        return permissions;
     }
 
-    public List<SimpleGrantedAuthority> getAuthorities () {
+    public List<SimpleGrantedAuthority> getAuthorities() {
 
-        // TODO - Roles
-        // TODO - Permissions
-        // TODO - Create List Authority (concat both roles & perms)
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
 
-        List<SimpleGrantedAuthority> simpleGrantedAuthorityList = new ArrayList<>(
-//                getPermission().stream().map(index -> new SimpleGrantedAuthority(index)).toList()
-        );
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + this.name()));
+        authorities.addAll(getPermissions().stream().map(SimpleGrantedAuthority::new).toList());
 
-        simpleGrantedAuthorityList.add(new SimpleGrantedAuthority("ROLE_" + this.name())); // Springs requirement to Authority role
-
-        simpleGrantedAuthorityList.addAll(getPermission().stream().map(SimpleGrantedAuthority::new).toList());
-
-        return simpleGrantedAuthorityList;
+        return authorities;
     }
 }

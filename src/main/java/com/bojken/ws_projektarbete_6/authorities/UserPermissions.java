@@ -1,6 +1,6 @@
 package com.bojken.ws_projektarbete_6.authorities;
 
-public enum UserPermission {
+public enum UserPermissions {
     GET("GET"),
     POST("POST"),
     PUT("PUT"),
@@ -8,7 +8,7 @@ public enum UserPermission {
 
     private final String permission;
 
-    UserPermission(String permission) {
+    UserPermissions(String permission) {
         this.permission = permission;
     }
 

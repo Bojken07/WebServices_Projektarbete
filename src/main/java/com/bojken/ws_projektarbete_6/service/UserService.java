@@ -1,6 +1,6 @@
 package com.bojken.ws_projektarbete_6.service;
 
-import com.bojken.ws_projektarbete_6.repository.CustomUser;
+import com.bojken.ws_projektarbete_6.model.CustomUser;
 import com.bojken.ws_projektarbete_6.repository.UserRepository;
 import com.bojken.ws_projektarbete_6.security.CustomUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;

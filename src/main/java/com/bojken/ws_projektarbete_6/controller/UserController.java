@@ -4,7 +4,7 @@ import ch.qos.logback.core.model.Model;
 import com.bojken.ws_projektarbete_6.authorities.UserRole;
 import com.bojken.ws_projektarbete_6.model.Movie;
 import com.bojken.ws_projektarbete_6.model.UserDTO;
-import com.bojken.ws_projektarbete_6.repository.CustomUser;
+import com.bojken.ws_projektarbete_6.model.CustomUser;
 import com.bojken.ws_projektarbete_6.repository.MovieRepository;
 import com.bojken.ws_projektarbete_6.repository.UserRepository;
 import com.bojken.ws_projektarbete_6.service.UserService;

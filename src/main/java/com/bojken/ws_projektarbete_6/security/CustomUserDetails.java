@@ -1,6 +1,6 @@
 package com.bojken.ws_projektarbete_6.security;
 
-import com.bojken.ws_projektarbete_6.repository.CustomUser;
+import com.bojken.ws_projektarbete_6.model.CustomUser;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
